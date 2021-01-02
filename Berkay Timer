@@ -1,0 +1,22 @@
+second = 00
+minute = 45
+
+
+
+def setup():
+    size(700,500)
+    frameRate(60)
+    second = 00
+    minute = 45
+    timer = 45*60*60
+def draw():
+    timer = minute * second * frameRate
+    background(100,100,100)
+    textAlign(CENTER)
+    text(second, 350, 175)
+    text(":", 300, 175)
+    text(minute, 250, 175)
+    text(":", 200, 175)
+    timer = timer - 1
+    if timer == 0:
+        print("Timer Finished")
